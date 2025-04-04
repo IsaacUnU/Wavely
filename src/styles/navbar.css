@@ -1,0 +1,153 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: var(--navbar-height);
+    max-width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+}
+
+.navbar.scrolled {
+    padding: 0.8rem 5%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-button span {
+    width: 25px;
+    height: 2px;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed; /* Cambiado de absolute a fixed */
+        top: var(--navbar-height); /* Usar variable para la altura del navbar */
+        right: 0;
+        flex-direction: column;
+        background: white;
+        padding: 1rem;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        width: 250px; /* Ancho fijo */
+        height: calc(100vh - var(--navbar-height));
+        overflow-y: auto; /* Permite scroll si el contenido es muy largo */
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Animaciones para el menú móvil */
+.menu-button.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+:root {
+  --navbar-height: 80px;
+}
+
+section {
+  scroll-margin-top: var(--navbar-height);
+  padding-top: var(--navbar-height);
+}
+
+#contacto {
+  scroll-margin-top: var(--navbar-height);
+  padding-top: var(--navbar-height);
+}
