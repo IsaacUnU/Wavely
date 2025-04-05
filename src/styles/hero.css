@@ -1,68 +1,76 @@
-    .hero {
+.hero {
     position: relative;
     height: 100vh;
     min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url('../assets/hero-bg.jpg');  Asegúrate de tener una imagen de fondo */
+    background-image: url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
-    }
+}
 
-    .hero-overlay {
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
-    }
+}
 
-    .hero-content {
+.hero-content {
     position: relative;
     text-align: center;
     padding: 2rem;
     max-width: 800px;
-    color: white;
+    color: var(--text-light);
     z-index: 1;
-    }
+}
 
-    .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
+    text-shadow: var(--neon-glow);
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    .hero p {
+
+
+.hero p {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.6;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
+    color: var(--text-light);
+}
 
-    .cta {
+.cta {
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 1.2rem 3rem;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
-    color: white;
-    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    color: var(--text-light);
+    background: var(--gradient-accent);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
 
-    .cta:hover {
+.cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
+    box-shadow: var(--neon-glow);
+}
 
-    /* Diseño responsivo */
-    @media (max-width: 768px) {
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -75,4 +83,4 @@
         padding: 0.8rem 2rem;
         font-size: 1rem;
     }
-    }
+}

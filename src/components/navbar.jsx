@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/navbar.css';
+import logo from '../images/mg-marc-1.webp'; 
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        Maximiza Digital
+        <img src={logo} alt="Maximiza Digital Logo" />
       </motion.div>
 
       <div className="menu-button" onClick={() => setIsOpen(!isOpen)}>

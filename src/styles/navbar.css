@@ -7,9 +7,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.9); /* Color oscuro semi-transparente */
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all 0.3s ease;
     height: var(--navbar-height);
@@ -19,16 +19,32 @@
 
 .navbar.scrolled {
     padding: 0.8rem 5%;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: var(--shadow-md);
 }
 
 .logo {
+    width: 150px; 
+    height: auto;
     font-size: 1.5rem;
     font-weight: 700;
     color: #333;
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 10px; /* Espacio entre el logo y el texto */    
+    transition: filter 0.3s ease; /* Transición suave para el brillo */
+}
+
+img:hover {
+    filter: drop-shadow(0 0 5px var(--accent)); /* Efecto de brillo al pasar el mouse */    
 }
 
 .nav-links {
@@ -50,13 +66,18 @@
 }
 
 .nav-links a {
-    color: #333;
+    color: var(--text-light); /* Cambiado a color claro */
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
     position: relative;
     padding: 0.5rem 1rem;
     white-space: nowrap; /* Evita que el texto se rompa */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent); /* Color cyan al hacer hover */
 }
 
 .nav-links a::after {
@@ -66,12 +87,8 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    background: var(--gradient-accent);
     transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
 }
 
 .menu-button {
@@ -85,7 +102,7 @@
 .menu-button span {
     width: 25px;
     height: 2px;
-    background: #333;
+    background: var(--text-light); /* Color claro para las líneas del menú */
     transition: all 0.3s ease;
 }
 
@@ -139,15 +156,15 @@
 }
 
 :root {
-  --navbar-height: 80px;
+    --navbar-height: 80px;
 }
 
 section {
-  scroll-margin-top: var(--navbar-height);
-  padding-top: var(--navbar-height);
+    scroll-margin-top: var(--navbar-height);
+    padding-top: var(--navbar-height);
 }
 
 #contacto {
-  scroll-margin-top: var(--navbar-height);
-  padding-top: var(--navbar-height);
+    scroll-margin-top: var(--navbar-height);
+    padding-top: var(--navbar-height);
 }

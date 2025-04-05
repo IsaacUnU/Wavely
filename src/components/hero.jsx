@@ -16,14 +16,14 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Impulsa tu presencia online
+          Tu agencia para alcanzar la cima de forma digital
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Marketing digital para llevar tu negocio al siguiente nivel
+          Obtenemos siempre tus mejores resultados
         </motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -32,7 +32,7 @@ const Hero = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#contacto" className="cta">Contáctanos</a>
+          <a href="#nosotros" className="cta">Como trabajamos?</a>
         </motion.div>
       </motion.div>
     </section>
