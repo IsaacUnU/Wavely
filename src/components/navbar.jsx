@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/navbar.css';
-import logo from '../images/mg-marc-1.webp'; 
+import logo from '../images/logo-sin-fondo.png'; 
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -57,10 +57,10 @@ const Navbar = () => {
             <a href="#inicio" onClick={handleClick}>Inicio</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#servicios" onClick={handleClick}>Servicios</a>
+            <a href="#nosotros" onClick={handleClick}>Nosotros</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#nosotros" onClick={handleClick}>Nosotros</a>
+            <a href="#servicios" onClick={handleClick}>Servicios</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
             <a href="#contacto" onClick={handleClick}>Contacto</a>

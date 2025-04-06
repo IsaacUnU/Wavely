@@ -4,29 +4,35 @@
     const About = () => {
     const processSteps = [
         {
-        title: "Análisis actual de tu negocio",
-        description: "Vamos a aplicar una estrategia personalizada para incrementar los resultados de tu negocio",
+        title: "Análisis inicial de tu negocio",
+        description: "Estudiamos tu situación actual y tus objetivos para crear una estrategia totalmente personalizada.",
         icon: "🔍"
         },
         {
-        title: "Análisis y estudio de tu marca",
-        description: "Obtenemos información de tu marca y competencia para optimizar las mejores opciones",
+        title: "Estudio de tu marca",
+        description: "Recogemos información clave sobre tu marca y tu audiencia para encontrar tu ventaja.",
         icon: "📊"
         },
         {
-        title: "Aplicamos estrategias",
-        description: "Planificamos para lograr los objetivos de la marca de la mejor forma digital",
+        title: "Diseño de estrategia digital",
+        description: "Planificamos cada acción para lograr los objetivos de forma eficiente y medible.",
         icon: "⚡"
         },
         {
-        title: "Lanzamos las campañas",
-        description: "Realizamos las campañas en los canales elegidos",
+        title: "Ejecución y lanzamiento de campañas",
+        description: "Creamos contenido, gestionamos redes sociales y activamos campañas en los canales más efectivos.",
         icon: "🚀"
         },
         {
-        title: "Valoración de los resultados",
-        description: "Revisión y ajuste de los resultados obtenidos",
+        title: "Seguimiento y análisis de resultados",
+        description: "Medimos el impacto, ajustamos lo necesario y te entregamos reportes claros para que veas tu crecimiento.",
         icon: "📈"
+        }
+,
+        {
+        title: "Diseño visual de marca",
+        description: "Creamos identidades visuales modernas y coherentes para transmitir confianza desde el primer vistazo.",
+        icon: "🎨"
         }
     ];
 

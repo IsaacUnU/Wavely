@@ -12,7 +12,7 @@
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all 0.3s ease;
-    height: var(--navbar-height);
+    height: 90px; /* Aumentado de 80px */
     max-width: 100%;
     box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
 }
@@ -24,7 +24,7 @@
 }
 
 .logo {
-    width: 150px; 
+    width: 200px; /* Aumentado de 150px */
     height: auto;
     font-size: 1.5rem;
     font-weight: 700;
@@ -36,7 +36,7 @@
 }
 
 .logo img {
-    height: 65px;
+    height: 200px; /* Aumentado de 65px */
     width: auto;
     object-fit: contain;
     margin-right: 10px; /* Espacio entre el logo y el texto */    
@@ -156,7 +156,7 @@ img:hover {
 }
 
 :root {
-    --navbar-height: 80px;
+    --navbar-height: 90px; /* Aumentado de 80px */
 }
 
 section {

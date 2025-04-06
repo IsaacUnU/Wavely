@@ -16,14 +16,14 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Tu agencia para alcanzar la cima de forma digital
+          Diseñamos tu presencia. Potenciamos tu impacto.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Obtenemos siempre tus mejores resultados
+          Todo gran proyecto empieza con una idea… y alguien con ganas de romperla.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
