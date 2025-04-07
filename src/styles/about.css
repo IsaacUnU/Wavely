@@ -122,6 +122,29 @@
     color: var(--text-dark);
 }
 
+.cta-button {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--gradient-accent);
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-button:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
     .about-content {
         grid-template-columns: 1fr;
@@ -142,5 +165,14 @@
 
     .process-item {
         padding: 1.5rem;
+    }
+
+    .cta-button {
+        margin-top: 1.5rem;
+    }
+    
+    .contact-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
     }
 }
