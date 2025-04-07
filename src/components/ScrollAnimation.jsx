@@ -1,32 +1,21 @@
 import { motion } from 'framer-motion';
-import useScrollDirection from '../hooks/useScrollDirection';
 
-const ScrollAnimation = ({ children, className }) => {
-  const scrollDirection = useScrollDirection();
-  
-  const variants = {
-    hidden: {
-      opacity: 0,
-      y: scrollDirection === "down" ? 50 : -50
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15
-      }
-    }
-  };
-
+const ScrollAnimation = ({ children }) => {
   return (
     <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
-      variants={variants}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ 
+        opacity: 1, 
+        y: 0,
+        transition: {
+          duration: 0.6,
+          ease: "easeOut"
+        }
+      }}
+      viewport={{ 
+        once: true,
+        margin: "-100px"
+      }}
     >
       {children}
     </motion.div>
