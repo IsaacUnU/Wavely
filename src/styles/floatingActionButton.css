@@ -1,0 +1,37 @@
+    .floating-action-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    background: var(--gradient-accent);
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-icon {
+    font-size: 1.5rem;
+    }
+
+    .button-text {
+    font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+    .floating-action-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+    }
+    
+    .button-text {
+        font-size: 0.9rem;
+    }
+    }

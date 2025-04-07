@@ -1,65 +1,102 @@
-    .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(5px);
-    z-index: 1000;
-    }
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(15, 23, 42, 0.8);
+backdrop-filter: blur(5px);
+z-index: 1000;
+}
 
-    .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--background);
-    padding: 2rem;
-    border-radius: var(--border-radius-lg);
-    z-index: 1001;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: var(--shadow-lg);
-    }
+.modal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: var(--background);
+padding: 2rem;
+border-radius: var(--border-radius-lg);
+z-index: 1001;
+width: 90%;
+max-width: 500px;
+box-shadow: var(--shadow-lg);
+}
 
-    .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-dark);
-    }
+.close-button {
+position: absolute;
+top: 15px;
+right: 15px;
+background: transparent;
+border: none;
+font-size: 1.5rem;
+cursor: pointer;
+color: var(--text-dark);
+transition: transform 0.3s ease;
+padding: 5px;
+line-height: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+filter: drop-shadow(2px 2px 0 rgba(34, 211, 238, 0.3));
+box-shadow: none;
+}
 
-    .modal h3 {
-    margin-bottom: 1.5rem;
-    color: var(--primary);
-    font-size: 1.5rem;
-    }
+.close-button:hover,
+.close-button:focus,
+.close-button:active {
+transform: rotate(90deg);
+outline: none;
+filter: drop-shadow(3px 3px 0 rgba(34, 211, 238, 0.5));
+box-shadow: none;
+}
 
-    .form-group {
-    margin-bottom: 1rem;
-    }
+.modal h3 {
+margin-bottom: 1.5rem;
+color: var(--primary);
+font-size: 1.5rem;
+}
 
-    .form-group input,
-    .form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid rgba(14, 165, 233, 0.2);
-    border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.05);
-    }
+.form-group {
+margin-bottom: 1rem;
+}
 
-    .modal button[type="submit"] {
-    width: 100%;
-    padding: 1rem;
-    background: var(--gradient-accent);
-    color: var(--text-light);
-    border: none;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    cursor: pointer;
-    }
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 0.8rem;
+border: 1px solid rgba(14, 165, 233, 0.2);
+border-radius: var(--border-radius);
+background: rgba(255, 255, 255, 0.05);
+transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--primary);
+}
+
+.form-group textarea {
+min-height: 100px;
+resize: vertical;
+}
+
+.modal button[type="submit"] {
+width: 100%;
+padding: 1rem;
+background: var(--gradient-accent);
+color: var(--text-light);
+border: none;
+border-radius: var(--border-radius);
+font-weight: 600;
+cursor: pointer;
+margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+.modal {
+width: 95%;
+padding: 1.5rem;
+}
+}

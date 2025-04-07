@@ -1,17 +1,9 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import FloatingButton from './FloatingButton';
-import InterestModal from './InterestModal';
 import '../styles/services.css';
 
 const staggerChildren = {
   initial: { opacity: 0 },
   animate: { opacity: 1, transition: { staggerChildren: 0.2 } }
-};
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 50 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.8 } }
 };
 
 const scaleIn = {
@@ -20,14 +12,6 @@ const scaleIn = {
 };
 
 const Services = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState('');
-
-  const handleInterest = (service) => {
-    setSelectedService(service);
-    setModalOpen(true);
-  };
-
   const services = [
     {
       title: "Gestión de Redes Sociales",
@@ -135,18 +119,6 @@ const Services = () => {
           ))}
         </div>
       </motion.div>
-
-      <FloatingButton 
-        icon="💡"
-        text="¿Te interesa este servicio?"
-        onClick={() => handleInterest("Servicios Digitales")}
-      />
-      
-      <InterestModal 
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selectedService}
-      />
     </section>
   );
 };
