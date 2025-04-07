@@ -38,6 +38,15 @@ const Navbar = () => {
     }
   };
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    setIsOpen(false); // Close menu if open
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   // Controlar el scroll cuando el menú está abierto
   useEffect(() => {
     if (isOpen) {
@@ -60,7 +69,9 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img src={logo} alt="Maximiza Digital Logo" />
+          <a href="#" onClick={handleLogoClick}>
+            <img src={logo} alt="Maximiza Digital Logo" />
+          </a>
         </motion.div>
 
         <div 
