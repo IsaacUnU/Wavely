@@ -1,7 +1,13 @@
 {
   "files": {
-    "main.css": "/Wavely/static/css/main.4c46e821.css",
-    "main.js": "/Wavely/static/js/main.356b43d4.js",
+    "main.css": "/Wavely/static/css/main.7b8f7e61.css",
+    "main.js": "/Wavely/static/js/main.6d0c9d2f.js",
+    "static/css/278.9dd5b028.chunk.css": "/Wavely/static/css/278.9dd5b028.chunk.css",
+    "static/js/278.65c60faa.chunk.js": "/Wavely/static/js/278.65c60faa.chunk.js",
+    "static/css/573.610d0c1f.chunk.css": "/Wavely/static/css/573.610d0c1f.chunk.css",
+    "static/js/573.3872c625.chunk.js": "/Wavely/static/js/573.3872c625.chunk.js",
+    "static/css/303.ba17fd75.chunk.css": "/Wavely/static/css/303.ba17fd75.chunk.css",
+    "static/js/303.c050b12a.chunk.js": "/Wavely/static/js/303.c050b12a.chunk.js",
     "static/media/hero-bg.jpg": "/Wavely/static/media/hero-bg.801bf9a05e8a022249d4.jpg",
     "static/media/fa-solid-900.ttf": "/Wavely/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/Wavely/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -13,11 +19,17 @@
     "static/media/fa-v4compatibility.ttf": "/Wavely/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/Wavely/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/Wavely/index.html",
-    "main.4c46e821.css.map": "/Wavely/static/css/main.4c46e821.css.map",
-    "main.356b43d4.js.map": "/Wavely/static/js/main.356b43d4.js.map"
+    "main.7b8f7e61.css.map": "/Wavely/static/css/main.7b8f7e61.css.map",
+    "main.6d0c9d2f.js.map": "/Wavely/static/js/main.6d0c9d2f.js.map",
+    "278.9dd5b028.chunk.css.map": "/Wavely/static/css/278.9dd5b028.chunk.css.map",
+    "278.65c60faa.chunk.js.map": "/Wavely/static/js/278.65c60faa.chunk.js.map",
+    "573.610d0c1f.chunk.css.map": "/Wavely/static/css/573.610d0c1f.chunk.css.map",
+    "573.3872c625.chunk.js.map": "/Wavely/static/js/573.3872c625.chunk.js.map",
+    "303.ba17fd75.chunk.css.map": "/Wavely/static/css/303.ba17fd75.chunk.css.map",
+    "303.c050b12a.chunk.js.map": "/Wavely/static/js/303.c050b12a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c46e821.css",
-    "static/js/main.356b43d4.js"
+    "static/css/main.7b8f7e61.css",
+    "static/js/main.6d0c9d2f.js"
   ]
 }
