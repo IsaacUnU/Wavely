@@ -90,7 +90,7 @@ return (
             whileTap={{ scale: 0.95 }}
         >
             <a href="#contacto" className="contact-button">
-                ¿Empezamos a trabajar juntos?
+                ¿Empezamos a trabajar juntos, o qué?
             </a>
         </motion.div>
         </motion.div>
